@@ -2,72 +2,69 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Swing Trading Checklist</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app">
-    <h1>📊 Swing Trading Checklist</h1>
+  <header class="header">
+    <h1>Swing Checklist</h1>
+    <p>Kỷ luật trước mỗi lệnh</p>
+  </header>
 
+  <main class="app">
     <div class="input-group">
-      <label>Mã cổ phiếu</label>
-      <input type="text" id="symbol" placeholder="VD: VCB, FPT..." />
+      <input type="text" id="symbol" placeholder="Nhập mã (VCB, FPT…)"/>
     </div>
 
-    <div class="card">
-      <h2>1️⃣ Xu hướng</h2>
+    <section class="card">
+      <h2>📈 MUA – Xu hướng</h2>
       <label><input type="checkbox" class="rule"> Giá trên MA20 & MA50</label>
-      <label><input type="checkbox" class="rule"> MA20 > MA50</label>
+      <label><input type="checkbox" class="rule"> MA20 &gt; MA50</label>
       <label><input type="checkbox" class="rule"> Không gãy hỗ trợ</label>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>2️⃣ Điểm mua</h2>
-      <label><input type="checkbox" class="rule"> Pullback MA20 / nền chặt</label>
-      <label><input type="checkbox" class="rule"> Nến xác nhận</label>
+    <section class="card">
+      <h2>🎯 MUA – Điểm vào</h2>
+      <label><input type="checkbox" class="rule"> Pullback / nền chặt</label>
+      <label><input type="checkbox" class="rule"> Có nến xác nhận</label>
       <label><input type="checkbox" class="rule"> Không mua đuổi</label>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>3️⃣ Dòng tiền</h2>
-      <label><input type="checkbox" class="rule"> Volume giảm khi chỉnh</label>
-      <label><input type="checkbox" class="rule"> Volume tăng khi hồi</label>
-      <label><input type="checkbox" class="rule"> Không có vol xả</label>
-    </div>
-
-    <div class="card">
-      <h2>4️⃣ Chỉ báo</h2>
+    <section class="card">
+      <h2>💰 Dòng tiền & Chỉ báo</h2>
+      <label><input type="checkbox" class="rule"> Vol giảm khi chỉnh</label>
+      <label><input type="checkbox" class="rule"> Vol tăng khi hồi</label>
       <label><input type="checkbox" class="rule"> MFI 40–60 quay lên</label>
       <label><input type="checkbox" class="rule"> MACD không phân kỳ âm</label>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>5️⃣ Quản trị rủi ro</h2>
+    <section class="card">
+      <h2>🛡 Quản trị rủi ro</h2>
       <label><input type="checkbox" class="rule"> Stoploss ≤ 7%</label>
-      <label><input type="checkbox" class="rule"> Tỷ trọng ≤ 30% vốn</label>
-    </div>
+      <label><input type="checkbox" class="rule"> Tỷ trọng ≤ 30%</label>
+    </section>
 
-    <button id="tradeBtn" disabled>🚀 VÀO LỆNH</button>
+    <button id="tradeBtn" disabled class="primary">VÀO LỆNH</button>
 
-    <div class="card sell">
-      <h2>❌ CHECKLIST BÁN</h2>
-      <label><input type="checkbox" class="sell-rule"> Giá đóng cửa < MA20</label>
+    <section class="card sell">
+      <h2>🚨 BÁN / THOÁT LỆNH</h2>
+      <label><input type="checkbox" class="sell-rule"> Đóng cửa &lt; MA20</label>
       <label><input type="checkbox" class="sell-rule"> Thủng hỗ trợ</label>
       <label><input type="checkbox" class="sell-rule"> Lỗ ≥ 7%</label>
-      <label><input type="checkbox" class="sell-rule"> MFI > 80 quay đầu</label>
+      <label><input type="checkbox" class="sell-rule"> MFI &gt; 80 quay đầu</label>
       <label><input type="checkbox" class="sell-rule"> Vol tăng nhưng giá không tăng</label>
-      <label><input type="checkbox" class="sell-rule"> Đi ngang > 10 phiên</label>
-      <button id="sellBtn" disabled>🔴 BÁN / THOÁT</button>
-    </div>
+      <button id="sellBtn" disabled class="danger">BÁN NGAY</button>
+    </section>
 
     <div id="result" class="result"></div>
 
-    <div class="card history">
-      <h2>📒 LỊCH SỬ QUYẾT ĐỊNH</h2>
+    <section class="card history">
+      <h2>📒 Lịch sử</h2>
       <div id="historyList"></div>
-      <button id="clearHistory">🧹 Xoá lịch sử</button>
-    </div>
-  </div>
+      <button id="clearHistory" class="ghost">Xoá lịch sử</button>
+    </section>
+  </main>
 
   <script src="app.js"></script>
 </body>
