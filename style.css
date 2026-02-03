@@ -1,0 +1,81 @@
+body {
+  background: #0f172a;
+  font-family: Arial, sans-serif;
+  color: #e5e7eb;
+}
+
+.app {
+  max-width: 480px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.card {
+  background: #020617;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #1e293b;
+}
+
+.card h2 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.sell h2 { color: #f87171; }
+
+.history h2 { color: #60a5fa; }
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #334155;
+  color: #94a3b8;
+  font-weight: bold;
+}
+
+button.active {
+  background: #22c55e;
+  color: #022c22;
+}
+
+#sellBtn.active {
+  background: #dc2626;
+  color: white;
+}
+
+.history-item {
+  border-left: 4px solid #22c55e;
+  padding: 8px;
+  margin-bottom: 6px;
+  background: #020617;
+}
+
+.history-item.sell {
+  border-left-color: #dc2626;
+}
+
+.result {
+  text-align: center;
+  margin: 10px 0;
+}
